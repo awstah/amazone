@@ -50,11 +50,13 @@ function checkout() {
         {/**Right */}
         <div className="p-10 flex flex-col bg-white shadow-md">
           {items.length > 0 && (
-            <div className="whitespace-nowrap">
-              <h2>Subtotal ({items.length} items)</h2>
-              <span className="font-bold">
-                <Currency quantity={total} currency="GBP" />
-              </span>
+            <div>
+              <h2 className="whitespace-nowrap">
+                Subtotal ({items.length} items)
+                <span className="font-bold">
+                  <Currency quantity={total} currency="GBP" />
+                </span>
+              </h2>
               <button
                 className={`button  mt-2 ${
                   session &&
